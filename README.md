@@ -13,7 +13,7 @@ This repository contains my notes, lab work, investigations, and key takeaways w
 - Analyze logs and security events
 - Investigate suspicious activity
 - Understand common attack techniques
-- Work with SIEM platforms
+- Work with SIEM, EDR, and SOAR solutions
 - Analyze network traffic
 - Identify Indicators of Compromise (IOCs)
 - Understand incident response processes
@@ -21,55 +21,101 @@ This repository contains my notes, lab work, investigations, and key takeaways w
 
 ---
 
-## 🧠 Topics
+## 🧠 Topics Covered
 
 - Security Operations
-- Security Monitoring
-- Log Analysis
-- SIEM
-- Threat Detection
-- Incident Response
-- Digital Forensics
-- Network Security
+- Cyber Defence Frameworks
 - Phishing Analysis
+- Network Traffic Analysis
+- Network Security Monitoring
+- Web Security Monitoring
+- Windows Security Monitoring
+- Linux Security Monitoring
 - Malware Analysis
-- Windows Security
-- Linux Security
 - Threat Intelligence
-- MITRE ATT&CK
+- SIEM
+- Alert Triage
+- Incident Response
 
 ---
 
 ## 🛠️ Tools
 
-Tools will be added here as I learn and use them during the path.
+Tools will be added as I learn and use them throughout the path.
 
 - Splunk
+- Elastic Stack
 - Wireshark
-- VirusTotal
+- NetworkMiner
+- Snort
 - Sysmon
-- Wazuh
+- VirusTotal
 - Other tools encountered during the labs
 
 ---
 
 ## 📚 Path Progress
 
-Progress: 🔄 In Progress
+### Module 1: Blue Team Introduction
+- ⬜ Not Started
 
-I will update this section as I complete each module and room
-throughout the SOC Level 1 learning path.
+### Module 2: SOC Team Internals
+- ⬜ Not Started
+
+### Module 3: Core SOC Solutions
+- ⬜ Not Started
+
+### Module 4: Cyber Defence Frameworks
+- ⬜ Not Started
+
+### Module 5: Phishing Analysis
+- ⬜ Not Started
+
+### Module 6: Network Traffic Analysis
+- ⬜ Not Started
+
+### Module 7: Network Security Monitoring
+- ⬜ Not Started
+
+### Module 8: Web Security Monitoring
+- ⬜ Not Started
+
+### Module 9: Windows Security Monitoring
+- ⬜ Not Started
+
+### Module 10: Linux Security Monitoring
+- ⬜ Not Started
+
+### Module 11: Malware Concepts for SOC
+- ⬜ Not Started
+
+### Module 12: Threat Analysis Tools
+- ⬜ Not Started
+
+### Module 13: SIEM Triage for SOC
+- ⬜ Not Started
+
+### Module 14: SOC Level 1 Capstone Challenges
+- ⬜ Not Started
+
+---
 
 ## 📝 Writeups
 
-Room writeups will be organized by topic:
+Writeups will be organized by module:
 
 ```text
-├── security-operations/
-├── network-security/
-├── siem/
-├── digital-forensics/
-├── incident-response/
-├── phishing/
-├── malware-analysis/
-└── capstone/
+├── 01-blue-team-introduction/
+├── 02-soc-team-internals/
+├── 03-core-soc-solutions/
+├── 04-cyber-defence-frameworks/
+├── 05-phishing-analysis/
+├── 06-network-traffic-analysis/
+├── 07-network-security-monitoring/
+├── 08-web-security-monitoring/
+├── 09-windows-security-monitoring/
+├── 10-linux-security-monitoring/
+├── 11-malware-concepts/
+├── 12-threat-analysis-tools/
+├── 13-siem-triage/
+└── 14-capstone/
