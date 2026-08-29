@@ -57,7 +57,7 @@ Tools will be added as I learn and use them throughout the path.
 ## 📚 Path Progress
 
 ### Module 1: Blue Team Introduction
-- ⬜ Not Started
+- 🔄 In Progress
 
 ### Module 2: SOC Team Internals
 - ⬜ Not Started
