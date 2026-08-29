@@ -55,20 +55,10 @@ Tools will be added here as I learn and use them during the path.
 
 ## 📚 Path Progress
 
-| Section | Status |
-|---|---|
-| Introduction to Cyber Security | 🔄 In Progress |
-| Cyber Defence Frameworks | ⬜ Not Started |
-| Security Operations | ⬜ Not Started |
-| Network Security | ⬜ Not Started |
-| SIEM | ⬜ Not Started |
-| Digital Forensics | ⬜ Not Started |
-| Incident Response | ⬜ Not Started |
-| Capstone / Final Labs | ⬜ Not Started |
+Progress: 🔄 In Progress
 
-> Progress will be updated as I complete the path.
-
----
+I will update this section as I complete each module and room
+throughout the SOC Level 1 learning path.
 
 ## 📝 Writeups
 
