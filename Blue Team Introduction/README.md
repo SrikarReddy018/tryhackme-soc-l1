@@ -1,315 +1,151 @@
-# Blue Team Introduction
+# Blue Team Introduction 🛡️
 
-This module introduces the fundamentals of defensive cybersecurity, the role of a Security Operations Center (SOC), common Blue Team roles, and the different ways attackers target humans and systems.
+## Overview
 
-The main focus is understanding how security teams are structured, how attacks happen, and how defenders use mitigation, detection, investigation, and response to protect an organization.
+This module introduced the defensive side of cybersecurity and the role of a Security Operations Center (SOC) in protecting an organization.
 
----
-
-## 1. Security Operations Center (SOC)
-
-A **Security Operations Center (SOC)** is a central part of an organization's defensive security operations. Its primary responsibility is to monitor security activity, investigate alerts, and respond to threats.
-
-A typical SOC can include several roles:
-
-| Role | Responsibility |
-|---|---|
-| **SOC L1 Analyst** | Triage security alerts, perform initial investigation, and escalate complex cases to L2. |
-| **SOC L2 Analyst** | Investigate more advanced and complex attacks. |
-| **SOC Engineer** | Configure and maintain security tools such as SIEM and EDR. |
-| **SOC Manager** | Manage the SOC team and its overall operations. |
-
-The SOC is often an entry point into cybersecurity because an L1 analyst gets exposure to different types of attacks, tools, and security processes.
+The rooms covered the structure of security teams, the responsibilities of Blue Team members, common attack vectors against humans and systems, and the different ways organizations detect, mitigate, and respond to threats.
 
 ---
 
-## 2. Security Hierarchy
+## What I Learned
 
-Security structures differ depending on the size and requirements of an organization.
+### Security Operations Center
 
-A larger organization may have a structure such as:
+A SOC is responsible for monitoring an organization's environment, investigating security alerts, and responding to threats.
 
-**CEO → CISO → Security Department Managers → Security Teams**
+The main roles covered were:
 
-The **CISO (Chief Information Security Officer)** oversees the organization's security strategy and helps align security with business requirements.
+- **SOC L1 Analyst:** Performs initial alert triage and investigation.
+- **SOC L2 Analyst:** Handles more advanced investigations.
+- **SOC Engineer:** Maintains and configures security tools such as SIEM and EDR.
+- **SOC Manager:** Oversees the SOC team and its operations.
 
-Smaller organizations may not have dedicated security departments. IT may handle security responsibilities, while medium-sized organizations may have a general Information Security team.
+I also learned that the SOC is only one part of a larger security structure.
 
-### Common Security Departments
+### Security Teams
 
-- **Red Team:** Offensive security professionals who perform penetration testing and look for security weaknesses.
-- **GRC Team:** Focuses on governance, risk management, policies, and compliance with security requirements.
-- **Blue Team:** Focuses on defending the organization, including monitoring, detection, investigation, and incident response.
+In larger organizations, security responsibilities can be divided between different teams:
 
----
+- **Red Team:** Offensive security and penetration testing.
+- **GRC:** Governance, risk, and compliance.
+- **Blue Team:** Defensive security.
+- **CIRT:** Responds to major or critical security incidents.
 
-## 3. Blue Team
-
-The **Blue Team** is responsible for defensive security.
-
-Its responsibilities can include:
-
-- Monitoring for attacks
-- Detecting malicious activity
-- Investigating security incidents
-- Responding to threats
-- Improving security controls
-
-The exact structure depends on the organization. A Blue Team may contain several departments and specialized roles.
-
-### Cyber Incident Response Team (CIRT)
-
-**CIRT (Cyber Incident Response Team)** handles serious or critical incidents when the SOC needs additional expertise.
-
-It can include:
-
-- Forensics experts
-- Threat intelligence experts
-- Threat hunters
-- Malware analysts
-
-CIRT may also be referred to as **CSIRT** or **CERT**.
-
-### Specialized Defensive Roles
-
-Larger organizations may also have specialized roles such as:
-
-- **Digital Forensics Analyst:** Investigates evidence and uncovers threats in disk and memory.
-- **Threat Intelligence Analyst:** Gathers information about emerging threats and threat groups.
-- **AppSec Engineer:** Helps maintain security throughout the software development lifecycle.
-- **AI Researcher:** Studies AI-related threats and defensive techniques.
+The exact structure depends on the organization's size and requirements.
 
 ---
 
-## 4. Humans as an Attack Vector
+## Humans as an Attack Vector
 
-Humans can become a major security weakness because attackers can manipulate people into providing access or performing actions that help an attack.
+One of the main concepts in this module was that employees can become an entry point for attackers.
 
-This is known as **social engineering**.
+Instead of exploiting a technical vulnerability, attackers can manipulate people through **social engineering**.
 
-Social engineering commonly relies on:
+Common techniques covered included:
 
-- **Trust:** Making the attacker appear legitimate.
-- **Emotion:** Creating urgency, fear, curiosity, or similar reactions.
-
-### Common Human-Targeted Attacks
-
-**Phishing**
-
-Attackers use deceptive emails or messages to trick victims into clicking malicious links, opening files, or providing credentials.
-
-A common example is a fake login page designed to collect usernames and passwords.
-
-**Malware Downloads**
-
-Attackers can disguise malware as legitimate software or use malicious websites to convince users to download and execute it.
-
-Techniques can include:
-
-- Fake CAPTCHAs
-- Malicious QR codes
-- SEO poisoning
-
-**Deepfakes**
-
-AI-generated audio or video can be used to impersonate trusted people such as managers, colleagues, or business partners.
-
-**Impersonation**
-
-Attackers can pretend to be someone else, such as an IT employee, and convince victims to provide access or perform an action.
-
-Other examples include:
-
-- Malicious USB drop campaigns
-- Physical attacks
+- Phishing
+- Malware delivery
+- Deepfakes
+- Impersonation
+- Malicious USB devices
 - Insider threats
 - Fake job offers
 
+Social engineering generally relies on making the attacker appear **trustworthy** while creating an **emotional response**, such as urgency or fear.
+
+From a SOC perspective, this means detecting and responding to attacks even when the initial compromise happened because of human interaction.
+
 ---
 
-## 5. Systems as an Attack Vector
+## Systems as an Attack Vector
 
-Attackers can also target systems directly without requiring the user to participate.
+The module also looked at attacks that target systems directly.
 
-A system can include:
+Examples of systems that can be valuable to attackers include:
 
-- Physical servers
-- Computers
-- Lab machines
-- Cloud platforms
+- User computers
+- Servers
 - Mail servers
-- Other infrastructure
+- Databases
+- Cloud platforms
+- Industrial systems
 
-The value of a system depends on what an attacker can gain by compromising it.
+The impact of a compromise depends heavily on what the system provides access to.
 
-For example, compromising one user's mailbox may provide access to a single account, while compromising a mail server could potentially provide access to many mailboxes.
+### Main attack methods covered
 
----
+**Software vulnerabilities**
 
-## 6. Common System Attack Methods
+Security flaws in software can be exploited to gain access to systems. Publicly known vulnerabilities are assigned CVE identifiers.
 
-### Human-Led Attacks
+A **zero-day** is a vulnerability that is unknown or has no available patch when it is discovered or exploited.
 
-Users can unintentionally help attackers compromise systems.
+**Misconfigurations**
 
-Examples include:
+Unlike vulnerabilities, misconfigurations are caused by an insecure system setup.
 
-- Reusing weak passwords
-- Connecting malicious USB devices
-- Downloading software from unsafe or pirated sources
+Examples include weak passwords, exposed databases, and incorrect access controls.
 
-### Software Vulnerabilities
+**Supply chain attacks**
 
-Software can contain security flaws that attackers can exploit.
-
-When a vulnerability becomes publicly known, it can be assigned a **CVE (Common Vulnerabilities and Exposures)** identifier.
-
-A **zero-day vulnerability** is a vulnerability that attackers discover or exploit before defenders have an available fix.
-
-Once a vulnerability is known, attackers may develop exploits while defenders work to patch affected systems.
-
-### Supply Chain Attacks
-
-Modern applications depend on third-party libraries and other software components.
-
-If an attacker compromises a trusted application or library and distributes a malicious update, users who install that update can become compromised.
-
-This is known as a **supply chain attack**.
+Attackers can compromise trusted software or dependencies and use them to reach the organizations that depend on them.
 
 ---
 
-## 7. Vulnerability Response
+## Mitigation and Detection
 
-The primary solution for a known software vulnerability is usually a **patch** provided by the software vendor.
-
-For a zero-day, a patch may not yet be available. During this period, defenders can use temporary protections such as:
-
-- Restricting access to trusted IP addresses
-- Applying temporary vendor-provided mitigations
-- Blocking known attack patterns using an **IPS** or **WAF**
-- Monitoring for signs of exploitation
-
-This is an important period for the SOC because exploitation may occur before the final patch is available.
-
----
-
-## 8. Misconfigurations
-
-A **misconfiguration** is different from a software vulnerability.
-
-- **Vulnerability:** A flaw in the software itself.
-- **Misconfiguration:** A problem caused by how the system has been configured.
-
-Examples include:
-
-- Weak passwords
-- Exposing systems or databases to the Internet
-- Incorrect access controls
-- Poorly configured devices
-
-Unlike a software vulnerability, a misconfiguration generally doesn't require a software update. The insecure configuration needs to be corrected.
-
-### Ways to Reduce Misconfigurations
-
-**Penetration Testing**
-
-Ethical hackers simulate attacks to identify security weaknesses.
-
-**Vulnerability Scanning**
-
-Security tools can periodically scan systems for issues such as outdated software or default passwords.
-
-**Configuration Audits**
-
-Systems can be reviewed against security best practices such as **CIS Benchmarks**.
-
----
-
-## 9. Mitigation vs Detection
-
-Effective security requires both **mitigation** and **detection**.
+A major distinction covered in the module was between **mitigation** and **detection**.
 
 ### Mitigation
 
-Mitigation attempts to prevent attacks or reduce their likelihood and impact.
+Mitigation attempts to prevent attacks or reduce their impact.
 
 Examples include:
 
-- Anti-phishing solutions
-- Antivirus and EDR
 - Patch management
+- Anti-phishing solutions
+- Antivirus / EDR
 - Network restrictions
 - Security awareness training
-- Secure system configurations
+- Configuration audits
 
 ### Detection
 
-Detection identifies attacks that manage to bypass preventive controls.
+Detection focuses on identifying attacks that get past preventive controls.
 
-This is a major responsibility of the SOC. Analysts monitor alerts, investigate suspicious activity, and respond to threats.
+This is where the SOC plays an important role by monitoring alerts, investigating suspicious activity, and escalating or responding to incidents.
 
-The basic defensive approach is:
+The overall idea can be summarized as:
 
 **Mitigate → Detect → Investigate → Respond**
 
-No preventive measure is perfect, so organizations need both mitigation and detection.
+---
+
+## Internal SOC vs MSSP
+
+The module also introduced two common SOC environments.
+
+| Internal SOC | MSSP |
+|---|---|
+| Protects its own organization | Provides security services to multiple customers |
+| Usually works with a smaller set of tools | May work with many different tools and platforms |
+| Analysts develop deep knowledge of one environment | Analysts gain exposure to multiple environments |
+| Workload can be more predictable | Can be faster-paced and higher-pressure |
+
+An MSSP can therefore provide a lot of exposure to different attacks, while an internal SOC allows analysts to develop deeper knowledge of a particular organization.
 
 ---
 
-## 10. Protecting Employees
+## SOC Career Path
 
-SOC analysts may work closely with other departments to improve the organization's security.
+SOC L1 can be used as an entry point into cybersecurity.
 
-Their responsibilities can extend beyond monitoring alerts and may include:
+A possible progression is:
 
-- Working with **IT or HR**
-- Proposing security improvements
-- Helping conduct security awareness training
-- Responding to employees who report suspected attacks
+**SOC L1 → SOC L2 → Senior / Specialized Role**
 
-This shows that SOC work can involve communication and cooperation with the wider organization.
-
----
-
-## 11. Internal SOC vs MSSP
-
-Organizations can operate their own SOC or use an **MSSP (Managed Security Services Provider)**.
-
-### Internal SOC
-
-An internal SOC works directly for the organization it protects.
-
-Typical characteristics:
-
-- Focuses on one organization
-- Usually works with fewer security tools
-- Requires deep knowledge of that organization's environment
-- May encounter fewer major incidents
-
-### MSSP
-
-An MSSP provides outsourced security services to multiple organizations.
-
-Typical characteristics:
-
-- Protects multiple customers
-- Can have a faster and more demanding workload
-- Requires working with many different tools and platforms
-- Provides exposure to a wider variety of attacks and incidents
-
-Working at an MSSP can be high-pressure, but the variety of environments and incidents can provide valuable experience early in a cybersecurity career.
-
----
-
-## 12. SOC Career Path
-
-SOC L1 can be a starting point for a cybersecurity career.
-
-A common progression is:
-
-**SOC L1 → SOC L2 → Senior / Specialized Roles**
-
-However, SOC experience can lead in several directions:
+From there, different paths are possible, including:
 
 - Security Engineering
 - Incident Response
@@ -318,43 +154,53 @@ However, SOC experience can lead in several directions:
 - Management
 - Other specialized security roles
 
-The first one or two years should be used to gain practical experience and understand which area of cybersecurity is the best fit.
-
-### Important habits for a SOC Analyst
-
-- **Learn from every alert:** Understand what happened instead of simply closing alerts.
-- **Think like an attacker:** Consider how the attack could have been performed.
-- **Verify everything:** Don't immediately trust an alert or piece of information without investigation.
-- **Get involved in incidents:** Real incidents provide valuable practical experience.
+The module emphasized using the first years of experience to build practical skills and determine which area of cybersecurity is the best fit.
 
 ---
 
-## 13. Practical Labs
+## Practical Work
 
-The module included practical scenarios designed to apply the concepts from the theory.
+The module included practical scenarios where I worked from the perspective of a SOC analyst.
 
-The exercises involved:
+### Human Attack Scenario
 
-- Protecting employees from human-targeted attacks
-- Improving security policies
-- Investigating systems at risk
-- Selecting appropriate remediation measures
-- Matching security roles to different incidents
+I worked with a security dashboard to:
 
-These labs helped connect the concepts of **Blue Team operations, human attack vectors, system attack vectors, mitigation, detection, and incident response** to practical SOC decision-making.
+- Identify employees at risk
+- Apply appropriate protections
+- Work with security policies
+
+### System Attack Scenario
+
+I also worked with systems at risk and had to:
+
+- Investigate the affected systems
+- Determine appropriate actions
+- Select suitable remediation measures
+
+### Security Role Challenge
+
+The final challenge required matching different security roles to incidents based on the responsibilities of each role.
+
+This helped reinforce the differences between SOC analysts, engineers, incident responders, and other security roles.
 
 ---
 
 ## Key Takeaways
 
-- The **Blue Team** focuses on defensive security.
-- The **SOC** is a central part of Blue Team operations.
-- **SOC L1 analysts** primarily triage alerts and escalate complex cases.
-- Attackers can target both **humans and systems**.
-- **Social engineering** exploits human psychology rather than technical vulnerabilities.
-- **Vulnerabilities** are software flaws, while **misconfigurations** result from insecure setup.
-- **Supply chain attacks** abuse trusted software or dependencies.
-- **Mitigation** reduces the likelihood or impact of attacks.
-- **Detection** identifies attacks that bypass preventive controls.
-- SOC analysts often work with teams such as **IT and HR**.
-- SOC experience can lead toward L2, engineering, incident response, threat intelligence, forensics, management, and other security roles.
+- The **SOC** is a major part of an organization's defensive security.
+- **L1 analysts** focus heavily on alert triage and initial investigation.
+- Attackers can use both **humans and systems** as attack vectors.
+- Social engineering takes advantage of human trust and emotions.
+- Vulnerabilities and misconfigurations are different problems and require different responses.
+- Security requires both **mitigation and detection**.
+- SOC analysts work with other teams rather than operating in isolation.
+- SOC L1 experience can lead to several different cybersecurity career paths.
+
+---
+
+## Conclusion
+
+This module gave me a better understanding of where a SOC analyst fits within an organization's security structure and what the defensive side of cybersecurity looks like.
+
+The practical scenarios also helped connect the concepts to the decisions a SOC analyst may have to make when dealing with employees, vulnerable systems, and security incidents.
