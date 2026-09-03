@@ -1,4 +1,4 @@
-# Blue Team Introduction 🛡️
+# Blue Team Introduction 
 
 ## Overview
 
