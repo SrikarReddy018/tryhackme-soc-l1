@@ -63,10 +63,10 @@ Tools will be added as I learn and use them throughout the path.
 - ✅ Completed
 
 ### Module 3: Core SOC Solutions
-- 🔄 In Progress
+- ✅ Completed
 
 ### Module 4: Cyber Defence Frameworks
-- ⬜ Not Started
+- 🔄 In Progress
 
 ### Module 5: Phishing Analysis
 - ⬜ Not Started
